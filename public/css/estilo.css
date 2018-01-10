@@ -1,0 +1,204 @@
+/*************************************/
+#top div{
+	padding:30px 20px;
+}
+
+/*************************************/
+#loginCarrito div{
+	padding:10px 10px;
+	background: white;
+}
+
+#loginCarrito div a{
+	background-color: white;
+	text-align: text-center;
+	/*font-size: 10px;*/
+}
+
+img {
+    max-width: 50px;
+    max-height: 200px;
+}
+
+
+/*************************************/
+	
+section aside div{
+	border:1px solid #999;
+	margin-bottom:10px;
+	padding-bottom:10px;
+	}
+	
+section aside div img{
+	margin:20px auto 10px auto;
+	}
+	
+#galeria ul li{
+	list-style:none;
+	display:inline;
+	}
+	
+#galeria ul li img{
+	width:30%;
+	margin:10px 5px;
+	}
+	
+footer div form{
+	padding:20px;
+	}
+	
+footer ul{
+	list-style:none;
+	padding:20px;
+	font-size:18px;
+	color:#555;
+	}
+	
+footer ol{
+	list-style:none;
+	padding:20px;
+	}
+	
+footer ol li{
+	float:left;
+	width:50px;
+	height:50px;
+	border-radius:100%;
+	margin:5px;
+	background:url(../img/photo.jpg);
+	background-size:cover;
+	}
+
+#footer p{
+	text-align:center;
+	width:100%;
+	/*padding:30px 20px;*/
+	/*align: center;*/
+	background-color: white;
+	
+	}
+	
+/*--Large Desktop--*/
+
+@media (min-width:1200px){
+	
+	#logo img{
+		padding:20px 10px;
+		}
+	
+	nav#botonera{
+		margin-top:3.5%;
+		width:50%;
+		}
+		
+	nav#botonera ul{
+		width:100%;
+		}
+		
+	nav#botonera ul li{
+		width:18%;
+		text-align:center;
+		background:#ddd;
+		margin:0 1%;
+		}
+		
+	#galeria ul{
+		margin-left:-15px;
+		}
+
+	}
+	
+/*--Medium Desktop--*/
+	
+@media (max-width:1199px) and (min-width:992px){
+	
+	#logo img{
+		padding:20px 10px;
+		}
+		
+	nav#botonera{
+		margin-top:3%;
+		width:60%;
+		}
+		
+	nav#botonera ul{
+		width:100%;
+		}
+		
+	nav#botonera ul li{
+		width:18%;
+		text-align:center;
+		background:#ddd;
+		margin:0 1%;
+		}
+		
+	#galeria ul{
+		margin-left:-35px;
+		}
+		
+	footer ul{
+	list-style:none;
+	padding:20px 10px;
+	font-size:12px;
+	color:#555;
+	}
+
+	}
+	
+/*--Tablets--*/
+	
+@media (max-width:991px) and (min-width:768px){
+	
+	#logo img{
+		padding:20px 240px;
+		}
+	
+	nav#botonera{
+		margin:2% 0;
+		width:100%;
+		}
+		
+	nav#botonera ul{
+		width:100%;
+		}
+		
+	nav#botonera ul li{
+		width:18%;
+		text-align:center;
+		background:#ddd;
+		margin:0 1%;
+		}
+		
+	section aside div{
+		border:0px solid #999;
+		}
+		
+	#galeria ul{
+		margin-left:-25px;
+		}
+
+	}
+	
+/*--Phones--*/
+	
+@media (max-width:767px){
+	
+	#logo{
+		background:white;
+		}
+		
+	#logo img{
+		padding:20px 30px;
+		}
+		
+	#galeria ul{
+		margin-left:-35px;
+		}
+		
+	#galeria ul li img{
+		width:100%;
+		margin:10px auto;
+		
+		}
+	 	
+	}

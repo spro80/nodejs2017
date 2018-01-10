@@ -1,0 +1,31 @@
+{
+  "name": "nodejs2017",
+  "version": "1.0.0",
+  "engines": {
+    "node": "6.11.0"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spro80/nodejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spro80/nodejs/issues"
+  },
+  "homepage": "https://github.com/spro80/nodejs#readme",
+  "dependencies": {
+    "consolidate": "^0.14.5",
+    "ejs": "^2.5.7",
+    "express": "^3.21.2",
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.19.1",
+    "mysql": "^2.14.1",
+    "routes": "^2.1.0"
+  }
+}
