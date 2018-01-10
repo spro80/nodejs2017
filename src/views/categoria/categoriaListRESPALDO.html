@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title> <%=(locals.title) ? title :''%> </title>
+    </head>
+    
+    <body>
+        <h2>LISTADO DE CATEGORIA:<h2>
+
+        <div class="data-table">
+            <table border="1" cellpadding="7" cellspacing="7">
+                <tr>
+                    <th width="50px">No</th>
+                    <th>Categoria</th>
+                    <th>Descripcion</th>
+                    <th>Vigencia</th>
+                    <th>Action</th>
+                    <th>Action</th>
+                </tr>
+                
+        <a class="a-inside edit" href="../subcategoria/addForm/">Agregar Subcategoria</a>
+
+        <% if(data.length){
+                 for(var i=0; i<data.length; i++) { %>
+                <tr>
+                    <td><%=(i+1)%></td>
+                    <td><%=data[i].id_categoria%></td>
+                    <td><%=data[i].des_subcategoria%></td>
+                    <td><%=data[i].vigencia_subcategoria%></td>
+                    <td>
+                        <a class="a-inside edit" href="../subcategoria/editForm/<%=data[i].id_subcategoria%>">Editar</a>
+                    </td>
+                    <td>
+                        <a class="a-inside delete" href="../subcategoria/deleteId/<%=data[i].id_subcategoria%>">Eliminar</a>
+                    </td>
+                    
+                </tr>
+            <% }
+            
+             }else{ %>
+                 <tr>
+                    <td colspan="6">No se han encontrado categorias...</td>
+                 </tr>
+            <% } %>
+
+
+                 <tr>
+                    <td>  <a class="a-inside delete" href="../menuPrincipal">Volver al Menu</a>  </td>
+                 </tr>
+
+            </table>
+         </div>
+         
+
+    </body>
+</html>

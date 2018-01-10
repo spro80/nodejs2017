@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title> <%=(locals.title) ? title :''%> </title>
+    </head>
+    
+    <body>
+        <h2>LISTADO DE CATEGORIA:<h2>
+
+
+		<div class="data-table">
+            <table border="1" cellpadding="7" cellspacing="7">
+                <tr>
+                    <th width="50px">No</th>
+                    <th>Descripcion</th>
+                    <th>Vigencia</th>
+                    <th>Action</th>
+                    <th>Action</th>
+                </tr>
+                
+
+		<% if(data.length){
+                 for(var i=0; i<data.length; i++) { %>
+                <tr>
+                    <td><%=(i+1)%></td>
+                    <td><%=data[i].des_categoria%></td>
+                    <td><%=data[i].vigencia_categoria%></td>
+                    <td>
+                        <a class="a-inside edit" href="../categoria/edit/<%=data[i].id_categoria%>">Edit</a>
+                    </td>
+                    <td>
+                        <a class="a-inside delete" href="../categoria/deleteCategoria/<%=data[i].id_categoria%>">Delete</a>
+                    </td>
+                    
+                </tr>
+            <% }
+            
+             }else{ %>
+                 <tr>
+                    <td colspan="3">No hay categorias...</td>
+                 </tr>
+            <% } %>
+
+            </table>
+         </div>
+         
+
+    </body>
+</html>

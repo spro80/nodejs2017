@@ -1,0 +1,22 @@
+{
+  "development": {
+    "SERVERURL": "http://localhost:3001/",
+    "PORT": 3001,
+    "BD": "mysql",
+    "BD_HOST": "localhost",
+    "BD_USER": "spro80",
+    "BD_PASS": "808080",
+    "BD_DATABASE": "carritoresponsive",
+	"TOKEN_SECRET": "tokenDesarrollo"
+  },
+  "production": {
+    "SERVERURL": "https://app.desarrolloweb.com/",
+    "PORT": 3002,
+    "BD": "mysql",
+    "BD_HOST": "localhost",
+    "BD_USER": "spro80",
+    "BD_PASS": "808080",
+    "BD_DATABASE": "carritoresponsive",
+	"TOKEN_SECRET": "tokenProduccion"
+  }
+}

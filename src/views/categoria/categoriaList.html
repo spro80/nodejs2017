@@ -1,0 +1,49 @@
+<html>
+	
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Node JS 2017-MENU</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/estilo.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	
+	<div class="container-fluid">
+		
+		<%include ../templates/headerAdmin.html%>
+		<%include ../templates/login.html%>
+		
+		<div class="container">
+			<div class="row" id="top">
+				<div class="col-lg-1 col-md-4 col-sm-6 col-xs-12"> Nro </div>
+				<div class="col-lg-1 col-md-4 col-sm-6 col-xs-12"> Categoria </div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12"> Descripcion </div>
+				<div class="col-lg-2 col-md-4 col-sm-6 col-xs-12"> Vigencia </div>
+				<div class="col-lg-2 col-md-4 col-sm-6 col-xs-12"> Action </div>
+				<div class="col-lg-2 col-md-4 col-sm-6 col-xs-12"> Action </div>
+			</div>
+			
+			<div class="row" id="top">
+			<%for(var i=0; i<data.length; i++) {%>
+				<div class="col-lg-1 col-md-4 col-sm-6 col-xs-12">  <%=(i+1)%>  </div>
+				<div class="col-lg-1 col-md-4 col-sm-6 col-xs-12">  <%=data[i].id_categoria%>  </div>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">  <%=data[i].des_categoria%>  </div>
+				<div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">  <%=data[i].vigencia_categoria%>  </div>
+				<div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">  <a class="a-inside edit" href="../categoria/editForm/<%=data[i].id_categoria%>">Editar</a>  </div>
+				<div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">  <a class="a-inside delete" href="../categoria/deleteId/<%=data[i].id_categoria%>">Eliminar</a>  </div>
+			<%}%>
+			</div>
+		</div>
+		
+		<br>
+		
+		<%include ../templates/footer.html%>
+		
+	</div> <!-- container-fluid -->
+</body>
+</html>

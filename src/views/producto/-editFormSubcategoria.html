@@ -1,0 +1,56 @@
+        
+        <div class="page-data">
+            
+            <form method="post" action="/subcategoria/editSave/<%=data[0].id_subcategoria%>">
+                <table cellpadding="11">
+                <tr>
+                    <td class="label">Descripcion</td><td>: <input type="text" name="descripcion" value="<%=data[0].des_subcategoria%>" required></td>
+                 </tr>
+
+                 <tr>
+                    <!--<td class="label" valign="top">Categor</td>-->
+                    <!--<td valign="top">
+                        <tr>-->
+                            <td class="label">Categoria</td>
+                            <td>: 
+                            <select name="categoria">
+                                <option value="0" <%= (data[0].id_categoria == 0) ? 'selected = "selected"' : ''  %> > 0.- Seleccione...</option>
+                                <option value="1" <%= (data[0].id_categoria == 1) ? 'selected = "selected"' : ''  %> > 1.- Shampoo</option>
+                                <option value="2" <%= (data[0].id_categoria == 2) ? 'selected = "selected"' : ''  %> > 2.- Balsamo</option>
+                                <option value="3" <%= (data[0].id_categoria == 3) ? 'selected = "selected"' : ''  %> > 3.- Aceites de Argan</option>
+                                <option value="4" <%= (data[0].id_categoria == 4) ? 'selected = "selected"' : ''  %> > 4.- Aceites de caballo</option>
+                            </select>
+                        <!--</tr>-->
+                    </td>
+                </tr>
+
+                 <tr>
+                    <!--<td class="label" valign="top">Vigencia</td>
+                    <td valign="top">: -->
+                        <!--<textarea name="vigencia" required cols="30" rows="5"><%=data[0].vigencia_subcategoria%></textarea>-->
+                        <!--<tr>-->
+                            <td class="label">Vigencia</td><td>: 
+                            <select name="vigencia">
+                                <option value="0" <%= (data[0].vigencia_subcategoria == 0) ? 'selected = "selected"' : ''  %> > 0.- No Vigente.</option>
+                                <option value="1" <%= (data[0].vigencia_subcategoria == 1) ? 'selected = "selected"' : ''  %> > 1.- Vigente.</option>
+                            </select>
+                        <!--</tr>-->
+                    </td>
+                </tr>                
+                
+                 <tr>
+                    <td class="label"></td>
+                    <td>
+                        &nbsp; <input type="submit" name="submit" value="Save">
+                       <input type="button" name="cancel" value="Cancel" class="cancel" onClick="cancelAdd()">
+                       <a class="a-inside delete" href="/subcategoria">Volver a Listado de Subcategorias</a>
+                    </td>
+                 </tr>
+                 
+                 
+                </table>
+            </form>
+            
+        </div>
+        
+        

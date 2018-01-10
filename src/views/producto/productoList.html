@@ -1,0 +1,83 @@
+<html>
+	
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Node JS 2017-MENU</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/estilo.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
+	<script src="js/jquery-2.2.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	
+	<!--Contenedor-->
+	<div class="container-fluid">
+		
+		<%include ../templates/headerAdmin.html%>
+		<%include ../templates/login.html%>
+		
+		<!-- Fila Top -->
+		<table>
+			<tr>
+			<td>
+		<div class="container">
+			
+			
+			<div class="row" id="top">
+			<%for(var i=0; i<data.length; i++) {%>
+			
+				<%//for(var j=0; j<4; j++) {%>
+					<%//=pos=i+j%>
+				<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+				  <div class="panel panel-primary">
+					<div class="panel-heading">Tipo: <%=data[i].des_tipo_producto.substr(0, 20)%> <br> Marca: <%=data[i].des_tipo_marca.substr(0, 20)%><br>Nombre: <%=data[i].nombre_producto.substr(0, 20)%> <br> Contenido: (<%=data[i].contenido_producto.substr(0, 20)%>) </div>
+						<div class="panel-body"><img src="<%=data[i].foto_producto%>" class="img-responsive" alt="Image" ></div> <!-- style="width:50%" -->
+						<div class="panel-footer">CODIGO: <%=data[i].id_producto%> <br> PRECIO: $ <%=data[i].id_producto%> <br> Agregar al Carito </div>
+						<div class="panel-footer">Agregar al Carito </div>
+				  </div>
+				</div>
+				<%//}%>
+				
+				
+				
+			<%}%>
+			</div>
+
+		</div>
+					</td>
+			<tr>
+			</table>
+			
+					<!--
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"> 
+					  <div class="panel panel-danger">
+						<div class="panel-heading">BLACK FRIDAY DEAL</div>
+						<div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+						<div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+					  </div>
+					</div>
+					
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"> 
+					  <div class="panel panel-success">
+						<div class="panel-heading">BLACK FRIDAY DEAL</div>
+						<div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+						<div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+					  </div>
+					</div>
+					
+					<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12"> 
+					  <div class="panel panel-success">
+						<div class="panel-heading">BLACK FRIDAY DEAL</div>
+						<div class="panel-body"><img src="https://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+						<div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+					  </div>
+					</div>-->
+					
+		<%include ../templates/footer.html%>
+		
+	</div> <!-- container-fluid -->
+</body>
+</html>
